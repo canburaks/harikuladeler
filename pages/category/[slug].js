@@ -36,14 +36,15 @@ const CategoryPage = (props) => {
                 //console.log("link", k);
                 const tagNames = link.fields.tag.map( tid => getTagNames(tid))
                 console.log(tagNames)
-                return ( <Card 
-                key={link.id}
-                tagNames={tagNames}
-                slug={link.fields.slug} 
-                title={link.fields.title} 
-                bilgi={link.fields.bilgi}
-                imageUrl={link.fields.imageUrl}
-                url={link.fields.url}
+                return ( 
+                <Card 
+                  key={link.id}
+                  tagNames={tagNames}
+                  slug={link.fields.slug} 
+                  title={link.fields.title} 
+                  bilgi={link.fields.bilgi}
+                  imageUrl={link.fields.imageUrl}
+                  url={link.fields.url}
                 />
                 )})}
             </div>

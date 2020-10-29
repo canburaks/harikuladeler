@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 
 import Layout from "../components/Layout"
@@ -16,6 +17,8 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   const router = useRouter()
   const { pathname } = router
   console.log("home",  pathname )
+  
+  const [activeState, setActiveState] = useState("all")
 
   
   const existingTags = tagdata.filter(t => t.fields.link)
@@ -23,6 +26,23 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   const tagNames = existingTags.map(t => t.fields.name)
   const categoryNames = existingCategories.map(c => c.fields.name)
   const favourites = linkdata.filter(link => link.fields.fav === true)
+  const getTagNamesById = (tagId) => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]
+
+  const getLinksByTagName = (tagSlug) => {
+    const currentTag = existingTags.filter(t => t.fields.slug === tagSlug)[0]
+    const currentLinkIds = currentTag.fields.link
+    return linkdata.filter(l => currentLinkIds.includes(l.id))
+  }
+  const activeLinks = activeState === "all" ? favourites : getLinksByTagName(activeState)
+
+  const handleClick = (e,tagname) => {
+    //e.preventDefault()
+    //router.push(tagname)
+    console.log(tagname, )
+    setActiveState(tagname)
+  }
+
+
 
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
@@ -39,6 +59,38 @@ export default function Home({ linkdata, categorydata, tagdata }) {
       </Head>
 
       <Hero categories={existingCategories} />
+      <div className="Selector">
+        {existingTags.map(t => (
+          <input 
+            key={t.fields.slug}   
+            type="radio" 
+            title={t.fields.name} 
+            value={t.fields.slug} 
+            onChange={(e) => handleClick(e,t.fields.slug)}
+            checked={activeState === t.fields.slug} 
+            name="selector" 
+          />
+          ))}
+      </div>
+
+      <div className="section main">
+        <div className="w-layout-grid grid">
+          {activeLinks.map(link => {
+            const tagNames = link.fields.tag.map(tid => getTagNamesById(tid));
+            return (
+              <Card 
+                key={link.id}
+                tagNames={tagNames}
+                slug={link.fields.slug} 
+                title={link.fields.title} 
+                bilgi={link.fields.bilgi}
+                imageUrl={link.fields.imageUrl}
+                url={link.fields.url}
+            />
+          )})}
+
+        </div>
+      </div>
     
     </Layout>
   )
