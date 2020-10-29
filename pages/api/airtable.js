@@ -1,6 +1,6 @@
 const AirtableAPI = {
-  apiKey: "",
-  base: "",
+  apiKey: "keym6ehWNZnQzpS4m",
+  base: "appq9CwhpYOjOv4tQ",
   url: "https://api.airtable.com/v0/",
   init: function ({ apiKey, base }) {
     this.apiKey = apiKey;
@@ -359,4 +359,6 @@ const BookmarksAPI = {
 //Bookmarks.fetchtags()
 window.Bookmarks = BookmarksAPI
 
-})()
+})
+
+export default AirtableAPI;

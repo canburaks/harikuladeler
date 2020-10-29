@@ -1,0 +1,29 @@
+@import "./normalize.css";
+@import "./webflow.css";
+@import "./harikuladeler-webflow.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fef0ea;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {min-height:50vh;}
+
+div.section.main {padding:64px 5%;}
+
+.card {background-color: #ffffff;}
+
+p.card-tag {margin:8px; border:1px solid rgb(28, 41, 230);padding:2px 8px; color:rgb(28, 41, 230); border-radius: 4px;}
