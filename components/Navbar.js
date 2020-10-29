@@ -4,16 +4,11 @@ import Link from 'next/link'
 const Navbar = ({ categories }) => {
     //console.log("navbar", categories );
     return (
-        <div data-collapse="small" data-animation="default" data-duration="400" role="banner" class="navigation-2 w-nav">
+        <div data-collapse="small" data-animation="default" data-duration="400" role="banner" className="navigation-2 w-nav">
 
             <div className="navigation-container-2">
                 <div className="navigation-left-2">
-					<Link href="/">
-                    <a className="brand-2 w-nav-brand">
-                        <img src="images/Group-7.png" alt="" class="flowbase-logo-2"/>
 
-                    </a>
-					</Link>
                 </div>
                 <div className="navigation-right-2">
                     <nav role="navigation" className="nav-menu w-nav-menu">

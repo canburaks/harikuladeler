@@ -150,7 +150,7 @@ h3 {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  background-image: url('/images/joe-mania-Se9wLyLCKy4-unsplash-1.jpg');
+  background-image: url('/images/macbook-pro.jpg');
   justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -999,7 +999,9 @@ h3 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* 
+  */ 
+  background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
