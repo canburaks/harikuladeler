@@ -52,13 +52,15 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   },[])
 
   return (
-    <Layout categories={existingCategories}>
+    <Layout>
       <Head>
         <title>Harikulade Uygulamalar</title>
+        <meta name="description" content="Harikulade uygulamalar keşfedin. Yazılım, tasarım, üretkenlik, iş ve no-code uygulamaları kürasyonu."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero categories={existingCategories} />
+      <Hero categories={categorydata} />
+
       <div className="Selector">
         {existingTags.map(t => (
           <input 

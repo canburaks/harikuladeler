@@ -10,10 +10,10 @@ const Card = ({title, bilgi, slug, url, imageUrl, tagNames}) => (
         <h3 className="heading-3">{title}</h3>
         <p className="paragraph-2">{bilgi}</p>
       </div>
-      <div class="card-tag-box">
+      <div className="card-tag-box">
       {tagNames.map(tn => (
-        <div class="card-tag" key={tn}>
-          <div class="card-tag-text">{tn}</div>
+        <div className="card-tag" key={tn}>
+          <div className="card-tag-text">{tn}</div>
         </div>
       ))}
       </div>

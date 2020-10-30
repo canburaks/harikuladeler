@@ -7,13 +7,13 @@ import Card from "../../components/Card"
 import Airdata  from "../api/hello"
 import Hero from "../../components/Hero"
 
-const CategoryPage = (props) => {
+const CategoryPage = ({categorydata, currentCategoryData, tagdata}) => {
     const router = useRouter()
     const { pathname } = router
 
-    console.log("category",  pathname, props)
+    //console.log("category", currentCategoryData.links)
     
-    const getTagNames = (tagId) => props.tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]
+    const getTagNames = (tagId) => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]
     //const existingCategories =  categorydata.filter(c => c.fields.link)
     //const category = categorydata.filter(c => c.fields.slug === pathname)[0]
     useEffect(() => {
@@ -24,18 +24,21 @@ const CategoryPage = (props) => {
     },[])
 
     return (
-    <Layout categories={props.existingCategories}>
+    <Layout >
       <Head>
-
+        <title>Hariukalde {currentCategoryData.fields.name} Uygulama ve Araçları Listesi</title>
+        <meta name="description" content={`Harikulade ${currentCategoryData.fields.name} uygulamaları keşfedebileceğiniz bir platform.`}></meta>
+        {/* 
+        */}
       </Head>
-      <Hero categories={props.existingCategories} />
+      <Hero categories={categorydata} />
 
         <div className="section main">
             <div className="w-layout-grid grid">
-            { props.currentCategoryData.links.map(link => {
+            { currentCategoryData.links && currentCategoryData.links.map(link => {
                 //console.log("link", k);
-                const tagNames = link.fields.tag.map( tid => getTagNames(tid))
-                console.log(tagNames)
+                const tagNames = link.fields.tag ? link.fields.tag.map( tid => getTagNames(tid)) : []
+                //console.log(tagNames)
                 return ( 
                 <Card 
                   key={link.id}
@@ -55,10 +58,10 @@ const CategoryPage = (props) => {
 
 export async function getStaticPaths() {
     const {linkdata, categorydata, tagdata } = await Airdata();
-    const existingCategories =  categorydata.filter(c => c.fields.link)
+    //const existingCategories =  categorydata.filter(c => c.fields.link)
 
 
-    const paths = existingCategories.map(c => ({params:{slug:c.fields.slug}}))
+    const paths = categorydata.map(c => ({params:{slug:c.fields.slug}}))
     return {  paths, fallback: false }
 };
 
@@ -66,18 +69,25 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     const {linkdata, categorydata, tagdata } = await Airdata();
-    const existingCategories =  categorydata.filter(c => c.fields.link)
-    const categoryAndLinks = existingCategories.map(c => {
-        const belongedLinks = linkdata.filter(l => c.fields.link.includes(l.id) )
-        const updatedCategory = {links: belongedLinks, ...c}
-        return updatedCategory
-    })
-    const currentCategoryData = categoryAndLinks.filter(c => c.fields.slug === params.slug)[0]
+    //console.log("data", categorydata)
+
+    //const existingCategories =  categorydata.filter(c => c.fields.link)
+    var currentCategory = categorydata.filter(c => c.fields.slug === params.slug)[0]
+    var currentLinks = linkdata.filter(l => currentCategory.fields.link.includes(l.id) )
+    currentCategory.links = currentLinks
+    var currentCategoryData = currentCategory
+    //const categoryAndLinks = categorydata.map(c => {
+    //  if (c.fields.link && c.fields.link.length > 0){
+    //    const belongedLinks = linkdata.filter(l => c.fields.link.includes(l.id) )
+    //    const updatedCategory = {links: belongedLinks, ...c}
+    //    return updatedCategory
+    //  }
+    //})
     //const data = await rawdata.json()
-    console.log("data", params)
+    //console.log("data", params)
     return {
       props: {
-        existingCategories,
+        categorydata,
         currentCategoryData,
         tagdata,
 
