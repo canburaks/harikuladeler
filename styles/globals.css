@@ -25,7 +25,9 @@ div.section.main {padding:64px 3%;}
 
 .card {background-color: #ffffff;}
 
-p.card-tag {margin:8px; border:1px solid rgb(28, 41, 230);padding:2px 8px; color:rgb(28, 41, 230); border-radius: 4px;}
+.card-tag {margin:8px; padding:2px 8px;  border-radius: 4px;}
+
+
 
 
 

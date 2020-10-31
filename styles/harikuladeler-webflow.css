@@ -137,7 +137,7 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 450px;
+  min-height: 400px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 0%;
@@ -166,6 +166,7 @@ h3 {
 }
 
 .hero-text-block {
+  position: relative;
   width: 50%;
   margin-top: 96px;
   text-align: center;
@@ -1284,11 +1285,11 @@ h3 {
   position: relative;
   left: 0px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1000px;
   grid-column-gap: 32px;
   grid-row-gap: 64px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
 }
@@ -1441,8 +1442,6 @@ h3 {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 8px;
-  background-color: rgba(40, 81, 247, 0.2);
-  color: #2851f7;
 }
 
 .card-tag-text {
@@ -1461,6 +1460,8 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.27);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
 }
 
 .image-5 {
@@ -1552,6 +1553,173 @@ h3 {
   background-color: transparent;
   -webkit-filter: blur(5px);
   filter: blur(5px);
+}
+
+.image-6 {
+  position: absolute;
+  left: 40%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 64px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.section-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 3%;
+  padding-left: 3%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.harikulade-box {
+  width: 100%;
+  max-width: 600px;
+  min-height: 600px;
+  margin-top: 64px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.harikulade-image-box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  max-width: 600px;
+  border-radius: 16px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+
+.harikulade-title {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.harikulade-bilgi {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.image-7 {
+  position: static;
+  left: auto;
+  top: auto;
+  right: 16px;
+  bottom: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.link-2 {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.outlink {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 64px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.text-block-3 {
+  margin-left: 2px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #272727;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.harikulade-tag-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tag-box {
+  height: 32px;
+  min-width: 60px;
+}
+
+.harikulade-info-box {
+  padding-right: 16px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+
+.cat-card {
+  width: 500px;
+  height: 300px;
+  border-radius: 32px;
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 991px) {

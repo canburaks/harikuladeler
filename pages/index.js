@@ -20,7 +20,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   
   const [activeState, setActiveState] = useState("all")
 
-  
+  const favouriteTags = tagdata.filter(t => t.fields.fav === true)
   const existingTags = tagdata.filter(t => t.fields.link)
   const existingCategories =  categorydata.filter(c => c.fields.link)
   const tagNames = existingTags.map(t => t.fields.name)
@@ -62,7 +62,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
       <Hero categories={categorydata} />
 
       <div className="Selector">
-        {existingTags.map(t => (
+        {favouriteTags.map(t => (
           <input 
             key={t.fields.slug}   
             type="radio" 
@@ -78,7 +78,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
       <div className="section main">
         <div className="w-layout-grid grid">
           {activeLinks.map(link => {
-            const tagNames = link.fields.tag.map(tid => getTagNamesById(tid));
+            const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNamesById(tid)) : [];
             return (
               <Card 
                 key={link.id}
