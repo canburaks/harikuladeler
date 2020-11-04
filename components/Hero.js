@@ -9,8 +9,8 @@ const Hero = ({ categories }) => {
 
         <div className="flex-container">
           <div className="hero-text-block">
-            <h1 className="hero-h1">Harikuladeler<br/></h1>
-            <p className="hero-paragraph">Curated collection of bookmarks includes design, development, marketing, office and no-code web apps and sites.</p>
+            <h1 className="hero-h1">Harikulade Uygulamalar.<br/></h1>
+            <p className="hero-paragraph">Harikulade tasarım, yazılım, ofis, pazarlama ve no-code uygulamaları.</p>
           </div>
           <div className="div-block-2"></div>
         </div>

@@ -8,7 +8,7 @@ const Card = ({title, bilgi,description, slug, url, imageUrl, tagNames}) => (
       <div className="card-image" style={{backgroundImage:`url(${imageUrl})`}}></div>
       <div className="card-info-box">
         <h3 className="heading-3">{title}</h3>
-        <p className="paragraph-2">{description}</p>
+        <p className="paragraph-2">{bilgi}</p>
       </div>
       <div className="card-tag-box">
       {tagNames.map(tn => (
