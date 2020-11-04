@@ -16,18 +16,18 @@ const CategoryPage = ({categorydata, currentCategoryData, tagdata}) => {
     const getTagNames = (tagId) => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]
     //const existingCategories =  categorydata.filter(c => c.fields.link)
     //const category = categorydata.filter(c => c.fields.slug === pathname)[0]
-    useEffect(() => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)}
-      gtag('js', new Date());
-      gtag('config', 'G-YWQNTGMG9S');
-    },[])
+    //useEffect(() => {
+    //  window.dataLayer = window.dataLayer || [];
+    //  function gtag(){dataLayer.push(arguments)}
+    //  gtag('js', new Date());
+    //  gtag('config', 'G-YWQNTGMG9S');
+    //},[])
 
     return (
     <Layout >
       <Head>
-        <title>Hariukalde {currentCategoryData.fields.name} Uygulama ve Araçları Listesi</title>
-        <meta name="description" content={`Harikulade ${currentCategoryData.fields.name} uygulamaları keşfedebileceğiniz bir platform.`}></meta>
+        <title>Awesome {currentCategoryData.fields.name} Apps and Tools</title>
+        <meta name="description" content={`Awesome ${currentCategoryData.fields.name} apps and tools.`}></meta>
         {/* 
         */}
       </Head>
