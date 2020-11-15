@@ -27,7 +27,7 @@ const Hero = ({ categories }) => {
                     </div>
                     <div className="nav-content-wrap">
                         <div className="dropdown-title">
-                            {c.fields.title}
+                            {c.fields.name}
                         </div>
                     </div>
                 </a>

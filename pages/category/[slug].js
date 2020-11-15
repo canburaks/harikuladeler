@@ -33,8 +33,7 @@ const CategoryPage = ({categorydata, currentCategoryData, tagdata}) => {
       </Head>
       <Hero categories={categorydata} />
 
-        <div className="section main">
-            <div className="w-layout-grid grid">
+            <div id="grid-container" className="w-layout-grid grid">
             { currentCategoryData.links && currentCategoryData.links.map(link => {
                 //console.log("link", k);
                 const tagNames = link.fields.tag ? link.fields.tag.map( tid => getTagNames(tid)) : []
@@ -51,7 +50,6 @@ const CategoryPage = ({categorydata, currentCategoryData, tagdata}) => {
                 />
                 )})}
             </div>
-        </div>
     </Layout>
   )
 }

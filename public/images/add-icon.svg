@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>add-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-8" transform="translate(-60.000000, -1753.000000)" fill="#1D1F20" fill-rule="nonzero">
+            <g id="Group-13" transform="translate(36.000000, 633.000000)">
+                <g id="Group-2-Copy-13">
+                    <path d="M32,1120 C32.5522847,1120 33,1120.44772 33,1121 L33,1127 L39,1127 C39.5522847,1127 40,1127.44772 40,1128 C40,1128.55228 39.5522847,1129 39,1129 L33,1129 L33,1135 C33,1135.55228 32.5522847,1136 32,1136 C31.4477153,1136 31,1135.55228 31,1135 L31,1129 L25,1129 C24.4477153,1129 24,1128.55228 24,1128 C24,1127.44772 24.4477153,1127 25,1127 L31,1127 L31,1121 C31,1120.44772 31.4477153,1120 32,1120 Z" id="add-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

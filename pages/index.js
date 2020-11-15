@@ -64,6 +64,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
 
       <Hero categories={categorydata} />
 
+
       <div className="Selector">
         {favouriteTags.map(t => (
           <input 
@@ -78,8 +79,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
           ))}
       </div>
 
-      <div className="section main">
-        <div className="w-layout-grid grid">
+      <div id="grid-container" class="w-layout-grid grid">
           {activeLinks.map(link => {
             const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNamesById(tid)) : [];
             return (
@@ -96,7 +96,6 @@ export default function Home({ linkdata, categorydata, tagdata }) {
           )})}
 
         </div>
-      </div>
     
     </Layout>
   )

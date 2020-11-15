@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>menu-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-8" transform="translate(-13.000000, -1718.000000)" fill="#1D1F20" fill-rule="nonzero">
+            <g id="Group-13" transform="translate(13.000000, 633.000000)">
+                <g id="Group-2-Copy-13">
+                    <path d="M15,1097 C15.5522847,1097 16,1097.44772 16,1098 C16,1098.55228 15.5522847,1099 15,1099 L1,1099 C0.44771525,1099 6.76353751e-17,1098.55228 0,1098 C-6.76353751e-17,1097.44772 0.44771525,1097 1,1097 L15,1097 Z M15,1091 C15.5522847,1091 16,1091.44772 16,1092 C16,1092.55228 15.5522847,1093 15,1093 L1,1093 C0.44771525,1093 6.76353751e-17,1092.55228 0,1092 C-6.76353751e-17,1091.44772 0.44771525,1091 1,1091 L15,1091 Z M15,1085 C15.5522847,1085 16,1085.44772 16,1086 C16,1086.55228 15.5522847,1087 15,1087 L1,1087 C0.44771525,1087 6.76353751e-17,1086.55228 0,1086 C-6.76353751e-17,1085.44772 0.44771525,1085 1,1085 L15,1085 Z" id="menu-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

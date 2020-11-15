@@ -22,36 +22,23 @@ a {
 main {min-height:50vh;}
 
 div.section.main {padding:64px 3%;}
-
-.card {background-color: #ffffff;}
-
-.card-tag {margin:8px; padding:2px 8px;  border-radius: 4px;}
+#grid-container {grid-column-gap: 32px; grid-row-gap:64px !important; padding: 32px 6vw !important;}
 
 
+.card-tag-box {flex-wrap: wrap;position: absolute; bottom: 8px; left:0; padding:0 8px;}
+.card-tag {margin:8px; padding:2px 4px;  border-radius: 6px; font-size: 12px; font-weight: bold; justify-content: center; align-items: center;}
 
 
-
-.custom-shape-divider-bottom-1603963806 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1603963806 svg {
-  position: relative;
-  display: block;
-  width: calc(113% + 1.3px);
-  height: 152px;
-}
-
-.custom-shape-divider-bottom-1603963806 .shape-fill {
-  fill: #79F0C8;
-}
-
+/* CARD */
+.card {position: relative;}
+div.card, .card-link {background-color: #ffffff; min-width:100% !important;}
+.card-info-box{padding: 8px 12px;}
+/* 
+.card {justify-content: space-between;}
+*/
+.card-image {height:200px;}
+.card h3 {font-size: 24px; margin:8px 0}
+.card p {font-size: 16px;}
 
 
 
