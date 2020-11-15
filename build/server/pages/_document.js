@@ -136,7 +136,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 
   render() {
     return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
-      lang: "en-",
+      lang: "tr",
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("script", {
           "data-ad-client": "ca-pub-9259748524746137",
