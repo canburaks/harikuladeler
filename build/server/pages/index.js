@@ -746,10 +746,10 @@ const CategoryPage = ({
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("title", {
-        children: ["Awesome ", currentCategoryData.fields.name, " Apps and Tools"]
+        children: ["Hariulade ", currentCategoryData.fields.name, " Uygulamalar\u0131 Listesi "]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         name: "description",
-        content: `Awesome ${currentCategoryData.fields.name} apps and tools.`
+        content: `Harikulade ${currentCategoryData.fields.name} uygulamaları listesi..`
       })]
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
       categories: categorydata
@@ -980,15 +980,10 @@ function Home({
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
-        children: "Harikulade Uygulamalar"
+        children: "Harikulade Uygulamalar: Tasar\u0131m, Yaz\u0131l\u0131m, \xDCretkenlik ..."
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         name: "description",
         content: "Harikulade uygulamalar ke\u015Ffedin.  Yaz\u0131l\u0131m, tasar\u0131m, \xFCretkenlik, i\u015F ve no-code uygulamalar\u0131 k\xFCrasyonu."
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
-        children: "Awesome Digital Products"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-        name: "description",
-        content: "Harikuladeler is a collection of bookmarks includes design, development, marketing, office and no-code web apps and sites."
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
         rel: "icon",
         href: "/favicon.ico"

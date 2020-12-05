@@ -26,8 +26,8 @@ const CategoryPage = ({categorydata, currentCategoryData, tagdata}) => {
     return (
     <Layout >
       <Head>
-        <title>Awesome {currentCategoryData.fields.name} Apps and Tools</title>
-        <meta name="description" content={`Awesome ${currentCategoryData.fields.name} apps and tools.`}></meta>
+        <title>Hariulade {currentCategoryData.fields.name} Uygulamaları Listesi </title>
+        <meta name="description" content={`Harikulade ${currentCategoryData.fields.name} uygulamaları listesi..`}></meta>
         {/* 
         */}
       </Head>

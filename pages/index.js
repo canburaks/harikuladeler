@@ -55,10 +55,8 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   return (
     <Layout>
       <Head>
-        <title>Harikulade Uygulamalar</title>
+        <title>Harikulade Uygulamalar: Tasarım, Yazılım, Üretkenlik ...</title>
         <meta name="description" content="Harikulade uygulamalar keşfedin.  Yazılım, tasarım, üretkenlik, iş ve no-code uygulamaları kürasyonu."></meta>
-        <title>Awesome Digital Products</title>
-        <meta name="description" content="Harikuladeler is a collection of bookmarks includes design, development, marketing, office and no-code web apps and sites."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

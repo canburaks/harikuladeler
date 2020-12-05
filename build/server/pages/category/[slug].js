@@ -746,10 +746,10 @@ const CategoryPage = ({
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("title", {
-        children: ["Awesome ", currentCategoryData.fields.name, " Apps and Tools"]
+        children: ["Hariulade ", currentCategoryData.fields.name, " Uygulamalar\u0131 Listesi "]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         name: "description",
-        content: `Awesome ${currentCategoryData.fields.name} apps and tools.`
+        content: `Harikulade ${currentCategoryData.fields.name} uygulamaları listesi..`
       })]
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
       categories: categorydata
