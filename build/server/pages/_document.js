@@ -108,6 +108,26 @@ module.exports = require("styled-jsx/server");
 
 /***/ }),
 
+/***/ "5jyv":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
 /***/ "5w0S":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -115,7 +135,7 @@ module.exports = require("styled-jsx/server");
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("8cZr");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("YqEe");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -163,25 +183,6 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 
 /***/ }),
 
-/***/ "8cZr":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("VDXt")
-
-
-/***/ }),
-
-/***/ "AXZJ":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-exports.__esModule=true;exports.htmlEscapeJsonString=htmlEscapeJsonString;// This utility is based on https://github.com/zertosh/htmlescape
-// License: https://github.com/zertosh/htmlescape/blob/0527ca7156a524d256101bb310a9f970f63078ad/LICENSE
-const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028','\u2029':'\\u2029'};const ESCAPE_REGEX=/[&><\u2028\u2029]/g;function htmlEscapeJsonString(str){return str.replace(ESCAPE_REGEX,match=>ESCAPE_LOOKUP[match]);}
-//# sourceMappingURL=htmlescape.js.map
-
-/***/ }),
-
 /***/ "F5FC":
 /***/ (function(module, exports) {
 
@@ -196,7 +197,7 @@ module.exports = require("next/dist/next-server/lib/constants.js");
 
 /***/ }),
 
-/***/ "VDXt":
+/***/ "XWvm":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -213,7 +214,7 @@ exports.Html = Html;
 exports.Main = Main;
 exports.NextScript = exports.Head = exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(__webpack_require__("rf6O"));
+var _propTypes = _interopRequireDefault(__webpack_require__("xRJz"));
 
 var _react = _interopRequireWildcard(__webpack_require__("cDcd"));
 
@@ -233,7 +234,7 @@ var _getPageFiles = __webpack_require__("vHio");
 
 var _utils2 = __webpack_require__("ri/Y");
 
-var _htmlescape = __webpack_require__("AXZJ");
+var _htmlescape = __webpack_require__("aJ+R");
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -819,6 +820,25 @@ function getAmpPath(ampPath, asPath) {
 
 /***/ }),
 
+/***/ "YqEe":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("XWvm")
+
+
+/***/ }),
+
+/***/ "aJ+R":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+exports.__esModule=true;exports.htmlEscapeJsonString=htmlEscapeJsonString;// This utility is based on https://github.com/zertosh/htmlescape
+// License: https://github.com/zertosh/htmlescape/blob/0527ca7156a524d256101bb310a9f970f63078ad/LICENSE
+const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028','\u2029':'\\u2029'};const ESCAPE_REGEX=/[&><\u2028\u2029]/g;function htmlEscapeJsonString(str){return str.replace(ESCAPE_REGEX,match=>ESCAPE_LOOKUP[match]);}
+//# sourceMappingURL=htmlescape.js.map
+
+/***/ }),
+
 /***/ "cDcd":
 /***/ (function(module, exports) {
 
@@ -840,10 +860,75 @@ module.exports = require("next/dist/next-server/lib/document-context.js");
 
 /***/ }),
 
-/***/ "rf6O":
-/***/ (function(module, exports) {
+/***/ "r1w5":
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("prop-types");
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = __webpack_require__("5jyv");
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+module.exports = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    var err = new Error(
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+    err.name = 'Invariant Violation';
+    throw err;
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
+  };
+
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
 
 /***/ }),
 
@@ -858,6 +943,25 @@ module.exports = require("next/dist/next-server/server/utils.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/server/get-page-files.js");
+
+/***/ }),
+
+/***/ "xRJz":
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, ReactIs; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__("r1w5")();
+}
+
 
 /***/ })
 

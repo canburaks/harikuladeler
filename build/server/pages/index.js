@@ -101,7 +101,7 @@ module.exports =
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("XE9o");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -160,1364 +160,22 @@ const Hero = ({
 
 /***/ }),
 
-/***/ "/jkW":
+/***/ "/Riu":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 exports.__esModule = true;
-exports.isDynamicRoute = isDynamicRoute; // Identify /[param]/ in route string
+exports.default = escapePathDelimiters; // escape delimiters used by path-to-regexp
 
-const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
-
-function isDynamicRoute(route) {
-  return TEST_ROUTE.test(route);
+function escapePathDelimiters(segment) {
+  return segment.replace(/[/#?]/g, char => encodeURIComponent(char));
 }
 
 /***/ }),
 
-/***/ "0Bsm":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__("TqRt");
-
-exports.__esModule = true;
-exports.default = withRouter;
-
-var _react = _interopRequireDefault(__webpack_require__("cDcd"));
-
-var _router = __webpack_require__("nOHt");
-
-function withRouter(ComposedComponent) {
-  function WithRouterWrapper(props) {
-    return /*#__PURE__*/_react.default.createElement(ComposedComponent, Object.assign({
-      router: (0, _router.useRouter)()
-    }, props));
-  }
-
-  WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
-  ;
-  WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
-
-  if (false) {}
-
-  return WithRouterWrapper;
-}
-
-/***/ }),
-
-/***/ "284h":
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__("cDf5");
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "3Mv1":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-
-const Card = ({
-  title,
-  bilgi,
-  description,
-  slug,
-  url,
-  imageUrl,
-  tagNames
-}) => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: url,
-  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-    target: "_blank",
-    rel: "nofollow noopener",
-    className: "card-link w-inline-block",
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-      className: "card",
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-        className: "card-image",
-        style: {
-          backgroundImage: `url(${imageUrl})`
-        }
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-        className: "card-info-box",
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h3", {
-          className: "heading-3",
-          children: title
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-          className: "paragraph-2",
-          children: bilgi
-        })]
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-        className: "card-tag-box",
-        children: tagNames.map(tn => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-          className: "card-tag",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-            className: "card-tag-text",
-            children: tn
-          })
-        }, tn))
-      })]
-    })
-  })
-});
-
-/* harmony default export */ __webpack_exports__["a"] = (Card);
-
-/***/ }),
-
-/***/ "3WeD":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
-exports.urlQueryToSearchParams = urlQueryToSearchParams;
-exports.assign = assign;
-
-function searchParamsToUrlQuery(searchParams) {
-  const query = {};
-  searchParams.forEach((value, key) => {
-    if (typeof query[key] === 'undefined') {
-      query[key] = value;
-    } else if (Array.isArray(query[key])) {
-      ;
-      query[key].push(value);
-    } else {
-      query[key] = [query[key], value];
-    }
-  });
-  return query;
-}
-
-function stringifyUrlQueryParam(param) {
-  if (typeof param === 'string' || typeof param === 'number' && !isNaN(param) || typeof param === 'boolean') {
-    return String(param);
-  } else {
-    return '';
-  }
-}
-
-function urlQueryToSearchParams(urlQuery) {
-  const result = new URLSearchParams();
-  Object.entries(urlQuery).forEach(([key, value]) => {
-    if (Array.isArray(value)) {
-      value.forEach(item => result.append(key, stringifyUrlQueryParam(item)));
-    } else {
-      result.set(key, stringifyUrlQueryParam(value));
-    }
-  });
-  return result;
-}
-
-function assign(target, ...searchParamsList) {
-  searchParamsList.forEach(searchParams => {
-    Array.from(searchParams.keys()).forEach(key => target.delete(key));
-    searchParams.forEach((value, key) => target.append(key, value));
-  });
-  return target;
-}
-
-/***/ }),
-
-/***/ "4Q3z":
-/***/ (function(module, exports) {
-
-module.exports = require("next/router");
-
-/***/ }),
-
-/***/ "5Yp1":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ Layout; });
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-
-// CONCATENATED MODULE: ./components/Footer.js
-
-
-
-
-function Footer() {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    className: "footer",
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: "flex-container",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "w-layout-grid footer-grid",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-          className: "footer-block",
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-            src: "/images/Group-1.png",
-            alt: "Harikuladeler logo",
-            className: "footer-logo"
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            className: "paragraph-basic",
-            children: "Harikulade yaz\u0131l\u0131m, tasar\u0131m, ofis, \xFCretkenlik ve no-code uygulamalar\u0131."
-          })]
-        })
-      })
-    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: "div-block",
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
-        className: "paragraph",
-        children: ["Harikuladeler 2020. Curated by ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-          href: "https://www.cbsofyalioglu.com",
-          rel: "me",
-          className: "link",
-          children: "CBS"
-        }), " with "]
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-        src: "/images/like.png",
-        loading: "lazy",
-        alt: "like icon",
-        className: "image-2"
-      })]
-    })]
-  });
-}
-
-/* harmony default export */ var components_Footer = (Footer);
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// CONCATENATED MODULE: ./components/Navbar.js
-
-
-
-
-
-const Navbar = ({
-  categories
-}) => {
-  //console.log("navbar", categories );
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    "data-collapse": "small",
-    "data-animation": "default",
-    "data-duration": "400",
-    role: "banner",
-    className: "navigation-2 w-nav",
-    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: "navigation-container-2",
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "navigation-left-2"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "navigation-right-2",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("nav", {
-          role: "navigation",
-          className: "nav-menu w-nav-menu",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-            "data-hover": "1",
-            "data-delay": "0",
-            className: "dropdown-2 w-dropdown",
-            children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: "dropdown-toggle-2 w-dropdown-toggle",
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                className: "icon-4 w-icon-dropdown-toggle"
-              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                className: "text-block",
-                children: "Kategoriler"
-              })]
-            }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("nav", {
-              className: "navigation-dropdown w-dropdown-list",
-              children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-                className: "dropdown-pointer",
-                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                  className: "dropdown-wrapper",
-                  children: categories.map(c => /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-                    href: `/category/${c.fields.slug}`,
-                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
-                      className: "dropdown-link-1 w-inline-block",
-                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                        className: "icon-wrap-2",
-                        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-                          src: `images/${c.fields.slug}.png`,
-                          alt: `${c.fields.name} icon`,
-                          className: "icon-5"
-                        })
-                      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-                        className: "nav-content-wrap",
-                        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                          className: "dropdown-title",
-                          children: c.fields.name
-                        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                          className: "nav-link-details",
-                          children: c.fields.bilgi.slice(0, 60)
-                        })]
-                      })]
-                    })
-                  }, "nav" + c.fields.slug))
-                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                  className: "pointer"
-                })]
-              })
-            })]
-          })
-        })
-      })]
-    })
-  });
-};
-
-/* harmony default export */ var components_Navbar = (Navbar);
-// CONCATENATED MODULE: ./components/Layout.js
-
-
-
-
-function Layout({
-  children,
-  categories
-}) {
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    children: [children, /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Footer, {})]
-  });
-}
-
-/***/ }),
-
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("RNiq");
-
-
-/***/ }),
-
-/***/ "6D7l":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.formatUrl = formatUrl;
-
-var querystring = _interopRequireWildcard(__webpack_require__("3WeD"));
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function () {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
-    return {
-      default: obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj.default = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-} // Format function modified from nodejs
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-const slashedProtocols = /https?|ftp|gopher|file/;
-
-function formatUrl(urlObj) {
-  let {
-    auth,
-    hostname
-  } = urlObj;
-  let protocol = urlObj.protocol || '';
-  let pathname = urlObj.pathname || '';
-  let hash = urlObj.hash || '';
-  let query = urlObj.query || '';
-  let host = false;
-  auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ':') + '@' : '';
-
-  if (urlObj.host) {
-    host = auth + urlObj.host;
-  } else if (hostname) {
-    host = auth + (~hostname.indexOf(':') ? `[${hostname}]` : hostname);
-
-    if (urlObj.port) {
-      host += ':' + urlObj.port;
-    }
-  }
-
-  if (query && typeof query === 'object') {
-    query = String(querystring.urlQueryToSearchParams(query));
-  }
-
-  let search = urlObj.search || query && `?${query}` || '';
-  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
-
-  if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
-    host = '//' + (host || '');
-    if (pathname && pathname[0] !== '/') pathname = '/' + pathname;
-  } else if (!host) {
-    host = '';
-  }
-
-  if (hash && hash[0] !== '#') hash = '#' + hash;
-  if (search && search[0] !== '?') search = '?' + search;
-  pathname = pathname.replace(/[?#]/g, encodeURIComponent);
-  search = search.replace('#', '%23');
-  return `${protocol}${host}${pathname}${search}${hash}`;
-}
-
-/***/ }),
-
-/***/ "7Ljw":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("4Q3z");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("5Yp1");
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("3Mv1");
-/* harmony import */ var _api_hello__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("Nxiy");
-/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("+lMf");
-
-
-
-
-
-
-
-
-
-
-const CategoryPage = ({
-  categorydata,
-  currentCategoryData,
-  tagdata
-}) => {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
-  const {
-    pathname
-  } = router; //console.log("category", currentCategoryData.links)
-
-  const getTagNames = tagId => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]; //const existingCategories =  categorydata.filter(c => c.fields.link)
-  //const category = categorydata.filter(c => c.fields.slug === pathname)[0]
-  //useEffect(() => {
-  //  window.dataLayer = window.dataLayer || [];
-  //  function gtag(){dataLayer.push(arguments)}
-  //  gtag('js', new Date());
-  //  gtag('config', 'G-YWQNTGMG9S');
-  //},[])
-
-
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("title", {
-        children: ["Hariulade ", currentCategoryData.fields.name, " Uygulamalar\u0131 Listesi "]
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-        name: "description",
-        content: `Harikulade ${currentCategoryData.fields.name} uygulamaları listesi..`
-      })]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
-      categories: categorydata
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      id: "grid-container",
-      className: "w-layout-grid grid",
-      children: currentCategoryData.links && currentCategoryData.links.map(link => {
-        //console.log("link", k);
-        const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNames(tid)) : []; //console.log(tagNames)
-
-        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Card__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
-          tagNames: tagNames,
-          slug: link.fields.slug,
-          title: link.fields.title,
-          bilgi: link.fields.bilgi,
-          imageUrl: link.fields.imageUrl,
-          url: link.fields.url
-        }, link.id);
-      })
-    })]
-  });
-};
-
-async function getStaticPaths() {
-  const {
-    linkdata,
-    categorydata,
-    tagdata
-  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_6__["default"])(); //const existingCategories =  categorydata.filter(c => c.fields.link)
-
-  const paths = categorydata.map(c => ({
-    params: {
-      slug: c.fields.slug
-    }
-  }));
-  return {
-    paths,
-    fallback: false
-  };
-}
-;
-async function getStaticProps({
-  params
-}) {
-  const {
-    linkdata,
-    categorydata,
-    tagdata
-  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_6__["default"])(); //console.log("data", categorydata)
-  //const existingCategories =  categorydata.filter(c => c.fields.link)
-
-  var currentCategory = categorydata.filter(c => c.fields.slug === params.slug)[0];
-  var currentLinks = linkdata.filter(l => currentCategory.fields.link.includes(l.id));
-  currentCategory.links = currentLinks;
-  var currentCategoryData = currentCategory; //const categoryAndLinks = categorydata.map(c => {
-  //  if (c.fields.link && c.fields.link.length > 0){
-  //    const belongedLinks = linkdata.filter(l => c.fields.link.includes(l.id) )
-  //    const updatedCategory = {links: belongedLinks, ...c}
-  //    return updatedCategory
-  //  }
-  //})
-  //const data = await rawdata.json()
-  //console.log("data", params)
-
-  return {
-    props: {
-      categorydata,
-      currentCategoryData,
-      tagdata
-    } // will be passed to the page component as props
-
-  };
-}
-/* harmony default export */ __webpack_exports__["default"] = (CategoryPage);
-
-/***/ }),
-
-/***/ "F5FC":
-/***/ (function(module, exports) {
-
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ "Nxiy":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const AirtableAPI = {
-  apiKey: "keym6ehWNZnQzpS4m",
-  base: "",
-  url: "https://api.airtable.com/v0/",
-  init: function ({
-    apiKey,
-    base
-  }) {
-    this.apiKey = apiKey;
-    this.base = base; //const records = await this.fetch("Link");
-
-    return this;
-  },
-  fetch: async function (table) {
-    if (this.apiKey && this.base && table) {
-      const endpoint = `${this.url}${this.base}/${table}?api_key=${this.apiKey}`; //console.log(endpoint);
-
-      const res = await fetch(endpoint, {});
-      const rj = await res.json(); //console.log("response", rj);
-
-      return rj.records;
-    } else return null;
-  }
-};
-
-async function fetcher() {
-  AirtableAPI.init({
-    apiKey: "keym6ehWNZnQzpS4m",
-    base: "appq9CwhpYOjOv4tQ"
-  });
-  const tagdata = await AirtableAPI.fetch("Tag");
-  const categorydata = await AirtableAPI.fetch("Category");
-  const linkdata = await AirtableAPI.fetch("Link"); //console.log("props", tagdata, categorydata, linkdata)
-
-  return {
-    linkdata,
-    tagdata,
-    categorydata
-  };
-}
-
-async function Airdata(req, res) {
-  return await fetcher();
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Airdata);
-
-/***/ }),
-
-/***/ "Osoz":
-/***/ (function(module, exports) {
-
-module.exports = require("next/dist/next-server/lib/router-context.js");
-
-/***/ }),
-
-/***/ "RNiq":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4Q3z");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("YFqc");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("5Yp1");
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("3Mv1");
-/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("+lMf");
-/* harmony import */ var _category_slug___WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("7Ljw");
-/* harmony import */ var _api_hello__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("Nxiy");
-
-
-
-
-
-
-
-
-
-
-
-function Home({
-  linkdata,
-  categorydata,
-  tagdata
-}) {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
-  const {
-    pathname
-  } = router;
-  console.log("home", pathname);
-  const {
-    0: activeState,
-    1: setActiveState
-  } = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])("all");
-  const favouriteTags = tagdata.filter(t => t.fields.fav === true);
-  const existingTags = tagdata.filter(t => t.fields.link);
-  const existingCategories = categorydata.filter(c => c.fields.link);
-  const tagNames = existingTags.map(t => t.fields.name);
-  const categoryNames = existingCategories.map(c => c.fields.name);
-  const favourites = linkdata.filter(link => link.fields.fav === true);
-
-  const getTagNamesById = tagId => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0];
-
-  const getLinksByTagName = tagSlug => {
-    const currentTag = existingTags.filter(t => t.fields.slug === tagSlug)[0];
-    const currentLinkIds = currentTag.fields.link;
-    return linkdata.filter(l => currentLinkIds.includes(l.id));
-  };
-
-  const activeLinks = activeState === "all" ? favourites : getLinksByTagName(activeState);
-
-  const handleClick = (e, tagname) => {
-    //e.preventDefault()
-    //router.push(tagname)
-    console.log(tagname);
-    setActiveState(tagname);
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'G-YWQNTGMG9S');
-  }, []);
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
-        children: "Harikulade Uygulamalar: Tasar\u0131m, Yaz\u0131l\u0131m, \xDCretkenlik ..."
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-        name: "description",
-        content: "Harikulade uygulamalar ke\u015Ffedin.  Yaz\u0131l\u0131m, tasar\u0131m, \xFCretkenlik, i\u015F ve no-code uygulamalar\u0131 k\xFCrasyonu."
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
-        rel: "icon",
-        href: "/favicon.ico"
-      })]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
-      categories: categorydata
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      className: "Selector",
-      children: favouriteTags.map(t => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("input", {
-        type: "radio",
-        title: t.fields.name,
-        value: t.fields.slug,
-        onChange: e => handleClick(e, t.fields.slug),
-        checked: activeState === t.fields.slug,
-        name: "selector"
-      }, t.fields.slug))
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      id: "grid-container",
-      class: "w-layout-grid grid",
-      children: activeLinks.map(link => {
-        const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNamesById(tid)) : [];
-        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Card__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {
-          tagNames: tagNames,
-          slug: link.fields.slug,
-          title: link.fields.title,
-          bilgi: link.fields.bilgi,
-          description: link.fields.description,
-          imageUrl: link.fields.imageUrl,
-          url: link.fields.url
-        }, link.id);
-      })
-    })]
-  });
-}
-async function getStaticProps(context) {
-  const {
-    linkdata,
-    categorydata,
-    tagdata
-  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_9__["default"])(); //const data = await rawdata.json()
-  //console.log("data", data)
-
-  return {
-    props: {
-      linkdata,
-      categorydata,
-      tagdata
-    } // will be passed to the page component as props
-
-  };
-}
-
-/***/ }),
-
-/***/ "S3md":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/***/ }),
-
-/***/ "TqRt":
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "X24+":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.removePathTrailingSlash = removePathTrailingSlash;
-exports.normalizePathTrailingSlash = void 0;
-/**
-* Removes the trailing slash of a path if there is one. Preserves the root path `/`.
-*/
-
-function removePathTrailingSlash(path) {
-  return path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
-}
-/**
-* Normalizes the trailing slash of a path according to the `trailingSlash` option
-* in `next.config.js`.
-*/
-
-
-const normalizePathTrailingSlash =  false ? undefined : removePathTrailingSlash;
-exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
-
-/***/ }),
-
-/***/ "YFqc":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("cTJO")
-
-
-/***/ }),
-
-/***/ "YTqd":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.getRouteRegex = getRouteRegex; // this isn't importing the escape-string-regex module
-// to reduce bytes
-
-function escapeRegex(str) {
-  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
-}
-
-function parseParameter(param) {
-  const optional = param.startsWith('[') && param.endsWith(']');
-
-  if (optional) {
-    param = param.slice(1, -1);
-  }
-
-  const repeat = param.startsWith('...');
-
-  if (repeat) {
-    param = param.slice(3);
-  }
-
-  return {
-    key: param,
-    repeat,
-    optional
-  };
-}
-
-function getRouteRegex(normalizedRoute) {
-  const segments = (normalizedRoute.replace(/\/$/, '') || '/').slice(1).split('/');
-  const groups = {};
-  let groupIndex = 1;
-  const parameterizedRoute = segments.map(segment => {
-    if (segment.startsWith('[') && segment.endsWith(']')) {
-      const {
-        key,
-        optional,
-        repeat
-      } = parseParameter(segment.slice(1, -1));
-      groups[key] = {
-        pos: groupIndex++,
-        repeat,
-        optional
-      };
-      return repeat ? optional ? '(?:/(.+?))?' : '/(.+?)' : '/([^/]+?)';
-    } else {
-      return `/${escapeRegex(segment)}`;
-    }
-  }).join(''); // dead code eliminate for browser since it's only needed
-  // while generating routes-manifest
-
-  if (true) {
-    let routeKeyCharCode = 97;
-    let routeKeyCharLength = 1; // builds a minimal routeKey using only a-z and minimal number of characters
-
-    const getSafeRouteKey = () => {
-      let routeKey = '';
-
-      for (let i = 0; i < routeKeyCharLength; i++) {
-        routeKey += String.fromCharCode(routeKeyCharCode);
-        routeKeyCharCode++;
-
-        if (routeKeyCharCode > 122) {
-          routeKeyCharLength++;
-          routeKeyCharCode = 97;
-        }
-      }
-
-      return routeKey;
-    };
-
-    const routeKeys = {};
-    let namedParameterizedRoute = segments.map(segment => {
-      if (segment.startsWith('[') && segment.endsWith(']')) {
-        const {
-          key,
-          optional,
-          repeat
-        } = parseParameter(segment.slice(1, -1)); // replace any non-word characters since they can break
-        // the named regex
-
-        let cleanedKey = key.replace(/\W/g, '');
-        let invalidKey = false; // check if the key is still invalid and fallback to using a known
-        // safe key
-
-        if (cleanedKey.length === 0 || cleanedKey.length > 30) {
-          invalidKey = true;
-        }
-
-        if (!isNaN(parseInt(cleanedKey.substr(0, 1)))) {
-          invalidKey = true;
-        }
-
-        if (invalidKey) {
-          cleanedKey = getSafeRouteKey();
-        }
-
-        routeKeys[cleanedKey] = key;
-        return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
-      } else {
-        return `/${escapeRegex(segment)}`;
-      }
-    }).join('');
-    return {
-      re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-      groups,
-      routeKeys,
-      namedRegex: `^${namedParameterizedRoute}(?:/)?$`
-    };
-  }
-
-  return {
-    re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
-    groups
-  };
-}
-
-/***/ }),
-
-/***/ "cDcd":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
-/***/ }),
-
-/***/ "cDf5":
-/***/ (function(module, exports) {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "cTJO":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__("284h");
-
-exports.__esModule = true;
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(__webpack_require__("cDcd"));
-
-var _router = __webpack_require__("elyg");
-
-var _router2 = __webpack_require__("nOHt");
-
-let cachedObserver;
-const listeners = new Map();
-const IntersectionObserver = false ? undefined : null;
-const prefetched = {};
-
-function getObserver() {
-  // Return shared instance of IntersectionObserver if already created
-  if (cachedObserver) {
-    return cachedObserver;
-  } // Only create shared IntersectionObserver if supported in browser
-
-
-  if (!IntersectionObserver) {
-    return undefined;
-  }
-
-  return cachedObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!listeners.has(entry.target)) {
-        return;
-      }
-
-      const cb = listeners.get(entry.target);
-
-      if (entry.isIntersecting || entry.intersectionRatio > 0) {
-        cachedObserver.unobserve(entry.target);
-        listeners.delete(entry.target);
-        cb();
-      }
-    });
-  }, {
-    rootMargin: '200px'
-  });
-}
-
-const listenToIntersections = (el, cb) => {
-  const observer = getObserver();
-
-  if (!observer) {
-    return () => {};
-  }
-
-  observer.observe(el);
-  listeners.set(el, cb);
-  return () => {
-    try {
-      observer.unobserve(el);
-    } catch (err) {
-      console.error(err);
-    }
-
-    listeners.delete(el);
-  };
-};
-
-function prefetch(router, href, as, options) {
-  if (true) return;
-  if (!(0, _router.isLocalURL)(href)) return; // Prefetch the JSON page if asked (only in the client)
-  // We need to handle a prefetch error here since we may be
-  // loading with priority which can reject but we don't
-  // want to force navigation since this is only a prefetch
-
-  router.prefetch(href, as, options).catch(err => {
-    if (false) {}
-  }); // Join on an invalid URI character
-
-  prefetched[href + '%' + as] = true;
-}
-
-function isModifiedEvent(event) {
-  const {
-    target
-  } = event.currentTarget;
-  return target && target !== '_self' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || // triggers resource download
-  event.nativeEvent && event.nativeEvent.which === 2;
-}
-
-function linkClicked(e, router, href, as, replace, shallow, scroll, locale) {
-  const {
-    nodeName
-  } = e.currentTarget;
-
-  if (nodeName === 'A' && (isModifiedEvent(e) || !(0, _router.isLocalURL)(href))) {
-    // ignore click for browser’s default behavior
-    return;
-  }
-
-  e.preventDefault(); //  avoid scroll for urls with anchor refs
-
-  if (scroll == null) {
-    scroll = as.indexOf('#') < 0;
-  } // replace state instead of push if prop is present
-
-
-  router[replace ? 'replace' : 'push'](href, as, {
-    shallow,
-    locale
-  }).then(success => {
-    if (!success) return;
-
-    if (scroll) {
-      window.scrollTo(0, 0);
-      document.body.focus();
-    }
-  });
-}
-
-function Link(props) {
-  if (false) {}
-
-  const p = props.prefetch !== false;
-
-  const [childElm, setChildElm] = _react.default.useState();
-
-  const router = (0, _router2.useRouter)();
-  const pathname = router && router.pathname || '/';
-
-  const {
-    href,
-    as
-  } = _react.default.useMemo(() => {
-    const [resolvedHref, resolvedAs] = (0, _router.resolveHref)(pathname, props.href, true);
-    return {
-      href: resolvedHref,
-      as: props.as ? (0, _router.resolveHref)(pathname, props.as) : resolvedAs || resolvedHref
-    };
-  }, [pathname, props.href, props.as]);
-
-  _react.default.useEffect(() => {
-    if (p && IntersectionObserver && childElm && childElm.tagName && (0, _router.isLocalURL)(href)) {
-      // Join on an invalid URI character
-      const isPrefetched = prefetched[href + '%' + as];
-
-      if (!isPrefetched) {
-        return listenToIntersections(childElm, () => {
-          prefetch(router, href, as);
-        });
-      }
-    }
-  }, [p, childElm, href, as, router]);
-
-  let {
-    children,
-    replace,
-    shallow,
-    scroll,
-    locale
-  } = props; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
-
-  if (typeof children === 'string') {
-    children = /*#__PURE__*/_react.default.createElement("a", null, children);
-  } // This will return the first child, if multiple are provided it will throw an error
-
-
-  const child = _react.Children.only(children);
-
-  const childProps = {
-    ref: el => {
-      if (el) setChildElm(el);
-
-      if (child && typeof child === 'object' && child.ref) {
-        if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
-          child.ref.current = el;
-        }
-      }
-    },
-    onClick: e => {
-      if (child.props && typeof child.props.onClick === 'function') {
-        child.props.onClick(e);
-      }
-
-      if (!e.defaultPrevented) {
-        linkClicked(e, router, href, as, replace, shallow, scroll, locale);
-      }
-    }
-  };
-
-  if (p) {
-    childProps.onMouseEnter = e => {
-      if (!(0, _router.isLocalURL)(href)) return;
-
-      if (child.props && typeof child.props.onMouseEnter === 'function') {
-        child.props.onMouseEnter(e);
-      }
-
-      prefetch(router, href, as, {
-        priority: true
-      });
-    };
-  } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
-  // defined, we specify the current 'href', so that repetition is not needed by the user
-
-
-  if (props.passHref || child.type === 'a' && !('href' in child.props)) {
-    childProps.href = (0, _router.addBasePath)((0, _router.addLocale)(as, typeof locale !== 'undefined' ? locale : router && router.locale, router && router.defaultLocale));
-  }
-
-  return /*#__PURE__*/_react.default.cloneElement(child, childProps);
-}
-
-var _default = Link;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "dZ6Y":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = mitt;
-/*
-MIT License
-Copyright (c) Jason Miller (https://jasonformat.com/)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-// This file is based on https://github.com/developit/mitt/blob/v1.1.3/src/index.js
-// It's been edited for the needs of this script
-// See the LICENSE at the top of the file
-
-function mitt() {
-  const all = Object.create(null);
-  return {
-    on(type, handler) {
-      ;
-      (all[type] || (all[type] = [])).push(handler);
-    },
-
-    off(type, handler) {
-      if (all[type]) {
-        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
-      }
-    },
-
-    emit(type, ...evts) {
-      // eslint-disable-next-line array-callback-return
-      ;
-      (all[type] || []).slice().map(handler => {
-        handler(...evts);
-      });
-    }
-
-  };
-}
-
-/***/ }),
-
-/***/ "elyg":
+/***/ "1JtQ":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1535,27 +193,27 @@ exports.resolveHref = resolveHref;
 exports.markLoadingError = markLoadingError;
 exports.default = void 0;
 
-var _normalizeTrailingSlash = __webpack_require__("X24+");
+var _normalizeTrailingSlash = __webpack_require__("LCJV");
 
-var _denormalizePagePath = __webpack_require__("wkBG");
+var _denormalizePagePath = __webpack_require__("IiAv");
 
-var _mitt = _interopRequireDefault(__webpack_require__("dZ6Y"));
+var _mitt = _interopRequireDefault(__webpack_require__("N7Y8"));
 
-var _utils = __webpack_require__("g/15");
+var _utils = __webpack_require__("Nv7i");
 
-var _isDynamic = __webpack_require__("/jkW");
+var _isDynamic = __webpack_require__("d32D");
 
-var _parseRelativeUrl = __webpack_require__("hS4m");
+var _parseRelativeUrl = __webpack_require__("wjDo");
 
-var _querystring = __webpack_require__("3WeD");
+var _querystring = __webpack_require__("hYEp");
 
-var _resolveRewrites = _interopRequireDefault(__webpack_require__("S3md"));
+var _resolveRewrites = _interopRequireDefault(__webpack_require__("ouWb"));
 
-var _routeMatcher = __webpack_require__("gguc");
+var _routeMatcher = __webpack_require__("3joC");
 
-var _routeRegex = __webpack_require__("YTqd");
+var _routeRegex = __webpack_require__("idHl");
 
-var _escapePathDelimiters = _interopRequireDefault(__webpack_require__("fcRV"));
+var _escapePathDelimiters = _interopRequireDefault(__webpack_require__("/Riu"));
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -2484,22 +1142,900 @@ Router.events = (0, _mitt.default)();
 
 /***/ }),
 
-/***/ "fcRV":
+/***/ "3Mv1":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("XE9o");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+
+const Card = ({
+  title,
+  bilgi,
+  description,
+  slug,
+  url,
+  imageUrl,
+  tagNames
+}) => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: url,
+  children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+    target: "_blank",
+    rel: "nofollow noopener",
+    className: "card-link w-inline-block",
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+      className: "card",
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+        className: "card-image",
+        style: {
+          backgroundImage: `url(${imageUrl})`
+        }
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+        className: "card-info-box",
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h3", {
+          className: "heading-3",
+          children: title
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
+          className: "paragraph-2",
+          children: bilgi
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+        className: "card-tag-box",
+        children: tagNames.map(tn => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+          className: "card-tag",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+            className: "card-tag-text",
+            children: tn
+          })
+        }, tn))
+      })]
+    })
+  })
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Card);
+
+/***/ }),
+
+/***/ "3joC":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 exports.__esModule = true;
-exports.default = escapePathDelimiters; // escape delimiters used by path-to-regexp
+exports.getRouteMatcher = getRouteMatcher;
 
-function escapePathDelimiters(segment) {
-  return segment.replace(/[/#?]/g, char => encodeURIComponent(char));
+function getRouteMatcher(routeRegex) {
+  const {
+    re,
+    groups
+  } = routeRegex;
+  return pathname => {
+    const routeMatch = re.exec(pathname);
+
+    if (!routeMatch) {
+      return false;
+    }
+
+    const decode = param => {
+      try {
+        return decodeURIComponent(param);
+      } catch (_) {
+        const err = new Error('failed to decode param');
+        err.code = 'DECODE_FAILED';
+        throw err;
+      }
+    };
+
+    const params = {};
+    Object.keys(groups).forEach(slugName => {
+      const g = groups[slugName];
+      const m = routeMatch[g.pos];
+
+      if (m !== undefined) {
+        params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
+      }
+    });
+    return params;
+  };
 }
 
 /***/ }),
 
-/***/ "g/15":
+/***/ "3tXa":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__("VFjW");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(__webpack_require__("cDcd"));
+
+var _router = __webpack_require__("1JtQ");
+
+var _router2 = __webpack_require__("SYP7");
+
+let cachedObserver;
+const listeners = new Map();
+const IntersectionObserver = false ? undefined : null;
+const prefetched = {};
+
+function getObserver() {
+  // Return shared instance of IntersectionObserver if already created
+  if (cachedObserver) {
+    return cachedObserver;
+  } // Only create shared IntersectionObserver if supported in browser
+
+
+  if (!IntersectionObserver) {
+    return undefined;
+  }
+
+  return cachedObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!listeners.has(entry.target)) {
+        return;
+      }
+
+      const cb = listeners.get(entry.target);
+
+      if (entry.isIntersecting || entry.intersectionRatio > 0) {
+        cachedObserver.unobserve(entry.target);
+        listeners.delete(entry.target);
+        cb();
+      }
+    });
+  }, {
+    rootMargin: '200px'
+  });
+}
+
+const listenToIntersections = (el, cb) => {
+  const observer = getObserver();
+
+  if (!observer) {
+    return () => {};
+  }
+
+  observer.observe(el);
+  listeners.set(el, cb);
+  return () => {
+    try {
+      observer.unobserve(el);
+    } catch (err) {
+      console.error(err);
+    }
+
+    listeners.delete(el);
+  };
+};
+
+function prefetch(router, href, as, options) {
+  if (true) return;
+  if (!(0, _router.isLocalURL)(href)) return; // Prefetch the JSON page if asked (only in the client)
+  // We need to handle a prefetch error here since we may be
+  // loading with priority which can reject but we don't
+  // want to force navigation since this is only a prefetch
+
+  router.prefetch(href, as, options).catch(err => {
+    if (false) {}
+  }); // Join on an invalid URI character
+
+  prefetched[href + '%' + as] = true;
+}
+
+function isModifiedEvent(event) {
+  const {
+    target
+  } = event.currentTarget;
+  return target && target !== '_self' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || // triggers resource download
+  event.nativeEvent && event.nativeEvent.which === 2;
+}
+
+function linkClicked(e, router, href, as, replace, shallow, scroll, locale) {
+  const {
+    nodeName
+  } = e.currentTarget;
+
+  if (nodeName === 'A' && (isModifiedEvent(e) || !(0, _router.isLocalURL)(href))) {
+    // ignore click for browser’s default behavior
+    return;
+  }
+
+  e.preventDefault(); //  avoid scroll for urls with anchor refs
+
+  if (scroll == null) {
+    scroll = as.indexOf('#') < 0;
+  } // replace state instead of push if prop is present
+
+
+  router[replace ? 'replace' : 'push'](href, as, {
+    shallow,
+    locale
+  }).then(success => {
+    if (!success) return;
+
+    if (scroll) {
+      window.scrollTo(0, 0);
+      document.body.focus();
+    }
+  });
+}
+
+function Link(props) {
+  if (false) {}
+
+  const p = props.prefetch !== false;
+
+  const [childElm, setChildElm] = _react.default.useState();
+
+  const router = (0, _router2.useRouter)();
+  const pathname = router && router.pathname || '/';
+
+  const {
+    href,
+    as
+  } = _react.default.useMemo(() => {
+    const [resolvedHref, resolvedAs] = (0, _router.resolveHref)(pathname, props.href, true);
+    return {
+      href: resolvedHref,
+      as: props.as ? (0, _router.resolveHref)(pathname, props.as) : resolvedAs || resolvedHref
+    };
+  }, [pathname, props.href, props.as]);
+
+  _react.default.useEffect(() => {
+    if (p && IntersectionObserver && childElm && childElm.tagName && (0, _router.isLocalURL)(href)) {
+      // Join on an invalid URI character
+      const isPrefetched = prefetched[href + '%' + as];
+
+      if (!isPrefetched) {
+        return listenToIntersections(childElm, () => {
+          prefetch(router, href, as);
+        });
+      }
+    }
+  }, [p, childElm, href, as, router]);
+
+  let {
+    children,
+    replace,
+    shallow,
+    scroll,
+    locale
+  } = props; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+
+  if (typeof children === 'string') {
+    children = /*#__PURE__*/_react.default.createElement("a", null, children);
+  } // This will return the first child, if multiple are provided it will throw an error
+
+
+  const child = _react.Children.only(children);
+
+  const childProps = {
+    ref: el => {
+      if (el) setChildElm(el);
+
+      if (child && typeof child === 'object' && child.ref) {
+        if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
+          child.ref.current = el;
+        }
+      }
+    },
+    onClick: e => {
+      if (child.props && typeof child.props.onClick === 'function') {
+        child.props.onClick(e);
+      }
+
+      if (!e.defaultPrevented) {
+        linkClicked(e, router, href, as, replace, shallow, scroll, locale);
+      }
+    }
+  };
+
+  if (p) {
+    childProps.onMouseEnter = e => {
+      if (!(0, _router.isLocalURL)(href)) return;
+
+      if (child.props && typeof child.props.onMouseEnter === 'function') {
+        child.props.onMouseEnter(e);
+      }
+
+      prefetch(router, href, as, {
+        priority: true
+      });
+    };
+  } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
+  // defined, we specify the current 'href', so that repetition is not needed by the user
+
+
+  if (props.passHref || child.type === 'a' && !('href' in child.props)) {
+    childProps.href = (0, _router.addBasePath)((0, _router.addLocale)(as, typeof locale !== 'undefined' ? locale : router && router.locale, router && router.defaultLocale));
+  }
+
+  return /*#__PURE__*/_react.default.cloneElement(child, childProps);
+}
+
+var _default = Link;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "4Q3z":
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
+/***/ "5Yp1":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ Layout; });
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__("F5FC");
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+
+// CONCATENATED MODULE: ./components/Footer.js
+
+
+
+
+function Footer() {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    className: "footer",
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      className: "flex-container",
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "w-layout-grid footer-grid",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+          className: "footer-block",
+          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+            src: "/images/Group-1.png",
+            alt: "Harikuladeler logo",
+            className: "footer-logo"
+          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+            className: "paragraph-basic",
+            children: "Harikulade yaz\u0131l\u0131m, tasar\u0131m, ofis, \xFCretkenlik ve no-code uygulamalar\u0131."
+          })]
+        })
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      className: "div-block",
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
+        className: "paragraph",
+        children: ["Harikuladeler 2020. Curated by ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+          href: "https://www.cbsofyalioglu.com",
+          rel: "me",
+          className: "link",
+          children: "CBS"
+        }), " with "]
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+        src: "/images/like.png",
+        loading: "lazy",
+        alt: "like icon",
+        className: "image-2"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ var components_Footer = (Footer);
+// EXTERNAL MODULE: ./.yarn/$$virtual/next-virtual-fc906c15e4/0/cache/next-npm-10.0.0-82dc2f1372-c01b177cb2.zip/node_modules/next/link.js
+var next_link = __webpack_require__("XE9o");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// CONCATENATED MODULE: ./components/Navbar.js
+
+
+
+
+
+const Navbar = ({
+  categories
+}) => {
+  //console.log("navbar", categories );
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+    "data-collapse": "small",
+    "data-animation": "default",
+    "data-duration": "400",
+    role: "banner",
+    className: "navigation-2 w-nav",
+    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      className: "navigation-container-2",
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "navigation-left-2"
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "navigation-right-2",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("nav", {
+          role: "navigation",
+          className: "nav-menu w-nav-menu",
+          children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+            "data-hover": "1",
+            "data-delay": "0",
+            className: "dropdown-2 w-dropdown",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+              className: "dropdown-toggle-2 w-dropdown-toggle",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                className: "icon-4 w-icon-dropdown-toggle"
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                className: "text-block",
+                children: "Kategoriler"
+              })]
+            }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("nav", {
+              className: "navigation-dropdown w-dropdown-list",
+              children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "dropdown-pointer",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                  className: "dropdown-wrapper",
+                  children: categories.map(c => /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+                    href: `/category/${c.fields.slug}`,
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("a", {
+                      className: "dropdown-link-1 w-inline-block",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                        className: "icon-wrap-2",
+                        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+                          src: `images/${c.fields.slug}.png`,
+                          alt: `${c.fields.name} icon`,
+                          className: "icon-5"
+                        })
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                        className: "nav-content-wrap",
+                        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                          className: "dropdown-title",
+                          children: c.fields.name
+                        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                          className: "nav-link-details",
+                          children: c.fields.bilgi.slice(0, 60)
+                        })]
+                      })]
+                    })
+                  }, "nav" + c.fields.slug))
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                  className: "pointer"
+                })]
+              })
+            })]
+          })
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ var components_Navbar = (Navbar);
+// CONCATENATED MODULE: ./components/Layout.js
+
+
+
+
+function Layout({
+  children,
+  categories
+}) {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    children: [children, /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Footer, {})]
+  });
+}
+
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("RNiq");
+
+
+/***/ }),
+
+/***/ "7Ljw":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("4Q3z");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("5Yp1");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("3Mv1");
+/* harmony import */ var _api_hello__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("Nxiy");
+/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("+lMf");
+
+
+
+
+
+
+
+
+
+
+const CategoryPage = ({
+  categorydata,
+  currentCategoryData,
+  tagdata
+}) => {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["useRouter"])();
+  const {
+    pathname
+  } = router; //console.log("category", currentCategoryData.links)
+
+  const getTagNames = tagId => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0]; //const existingCategories =  categorydata.filter(c => c.fields.link)
+  //const category = categorydata.filter(c => c.fields.slug === pathname)[0]
+  //useEffect(() => {
+  //  window.dataLayer = window.dataLayer || [];
+  //  function gtag(){dataLayer.push(arguments)}
+  //  gtag('js', new Date());
+  //  gtag('config', 'G-YWQNTGMG9S');
+  //},[])
+
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("title", {
+        children: ["Hariulade ", currentCategoryData.fields.name, " Uygulamalar\u0131 Listesi "]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        name: "description",
+        content: `Harikulade ${currentCategoryData.fields.name} uygulamaları listesi..`
+      })]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+      categories: categorydata
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      id: "grid-container",
+      className: "w-layout-grid grid",
+      children: currentCategoryData.links && currentCategoryData.links.map(link => {
+        //console.log("link", k);
+        const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNames(tid)) : []; //console.log(tagNames)
+
+        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Card__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+          tagNames: tagNames,
+          slug: link.fields.slug,
+          title: link.fields.title,
+          bilgi: link.fields.bilgi,
+          imageUrl: link.fields.imageUrl,
+          url: link.fields.url
+        }, link.id);
+      })
+    })]
+  });
+};
+
+async function getStaticPaths() {
+  const {
+    linkdata,
+    categorydata,
+    tagdata
+  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_6__["default"])(); //const existingCategories =  categorydata.filter(c => c.fields.link)
+
+  const paths = categorydata.map(c => ({
+    params: {
+      slug: c.fields.slug
+    }
+  }));
+  return {
+    paths,
+    fallback: false
+  };
+}
+;
+async function getStaticProps({
+  params
+}) {
+  const {
+    linkdata,
+    categorydata,
+    tagdata
+  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_6__["default"])(); //console.log("data", categorydata)
+  //const existingCategories =  categorydata.filter(c => c.fields.link)
+
+  var currentCategory = categorydata.filter(c => c.fields.slug === params.slug)[0];
+  var currentLinks = linkdata.filter(l => currentCategory.fields.link.includes(l.id));
+  currentCategory.links = currentLinks;
+  var currentCategoryData = currentCategory; //const categoryAndLinks = categorydata.map(c => {
+  //  if (c.fields.link && c.fields.link.length > 0){
+  //    const belongedLinks = linkdata.filter(l => c.fields.link.includes(l.id) )
+  //    const updatedCategory = {links: belongedLinks, ...c}
+  //    return updatedCategory
+  //  }
+  //})
+  //const data = await rawdata.json()
+  //console.log("data", params)
+
+  return {
+    props: {
+      categorydata,
+      currentCategoryData,
+      tagdata
+    } // will be passed to the page component as props
+
+  };
+}
+/* harmony default export */ __webpack_exports__["default"] = (CategoryPage);
+
+/***/ }),
+
+/***/ "83mc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.formatUrl = formatUrl;
+
+var querystring = _interopRequireWildcard(__webpack_require__("hYEp"));
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function () {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+    return {
+      default: obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj.default = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+} // Format function modified from nodejs
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+const slashedProtocols = /https?|ftp|gopher|file/;
+
+function formatUrl(urlObj) {
+  let {
+    auth,
+    hostname
+  } = urlObj;
+  let protocol = urlObj.protocol || '';
+  let pathname = urlObj.pathname || '';
+  let hash = urlObj.hash || '';
+  let query = urlObj.query || '';
+  let host = false;
+  auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ':') + '@' : '';
+
+  if (urlObj.host) {
+    host = auth + urlObj.host;
+  } else if (hostname) {
+    host = auth + (~hostname.indexOf(':') ? `[${hostname}]` : hostname);
+
+    if (urlObj.port) {
+      host += ':' + urlObj.port;
+    }
+  }
+
+  if (query && typeof query === 'object') {
+    query = String(querystring.urlQueryToSearchParams(query));
+  }
+
+  let search = urlObj.search || query && `?${query}` || '';
+  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
+
+  if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
+    host = '//' + (host || '');
+    if (pathname && pathname[0] !== '/') pathname = '/' + pathname;
+  } else if (!host) {
+    host = '';
+  }
+
+  if (hash && hash[0] !== '#') hash = '#' + hash;
+  if (search && search[0] !== '?') search = '?' + search;
+  pathname = pathname.replace(/[?#]/g, encodeURIComponent);
+  search = search.replace('#', '%23');
+  return `${protocol}${host}${pathname}${search}${hash}`;
+}
+
+/***/ }),
+
+/***/ "9mTt":
+/***/ (function(module, exports) {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+
+/***/ }),
+
+/***/ "F5FC":
+/***/ (function(module, exports) {
+
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "IiAv":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
+//# sourceMappingURL=denormalize-page-path.js.map
+
+/***/ }),
+
+/***/ "JN0C":
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "LCJV":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.removePathTrailingSlash = removePathTrailingSlash;
+exports.normalizePathTrailingSlash = void 0;
+/**
+* Removes the trailing slash of a path if there is one. Preserves the root path `/`.
+*/
+
+function removePathTrailingSlash(path) {
+  return path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+}
+/**
+* Normalizes the trailing slash of a path according to the `trailingSlash` option
+* in `next.config.js`.
+*/
+
+
+const normalizePathTrailingSlash =  false ? undefined : removePathTrailingSlash;
+exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
+
+/***/ }),
+
+/***/ "N7Y8":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = mitt;
+/*
+MIT License
+Copyright (c) Jason Miller (https://jasonformat.com/)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+// This file is based on https://github.com/developit/mitt/blob/v1.1.3/src/index.js
+// It's been edited for the needs of this script
+// See the LICENSE at the top of the file
+
+function mitt() {
+  const all = Object.create(null);
+  return {
+    on(type, handler) {
+      ;
+      (all[type] || (all[type] = [])).push(handler);
+    },
+
+    off(type, handler) {
+      if (all[type]) {
+        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
+      }
+    },
+
+    emit(type, ...evts) {
+      // eslint-disable-next-line array-callback-return
+      ;
+      (all[type] || []).slice().map(handler => {
+        handler(...evts);
+      });
+    }
+
+  };
+}
+
+/***/ }),
+
+/***/ "Nv7i":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2515,7 +2051,7 @@ exports.loadGetInitialProps = loadGetInitialProps;
 exports.formatWithValidation = formatWithValidation;
 exports.ST = exports.SP = exports.urlObjectKeys = void 0;
 
-var _formatUrl = __webpack_require__("6D7l");
+var _formatUrl = __webpack_require__("83mc");
 /**
 * Utils
 */
@@ -2608,109 +2144,222 @@ exports.ST = ST;
 
 /***/ }),
 
-/***/ "gguc":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "Nxiy":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const AirtableAPI = {
+  apiKey: "keym6ehWNZnQzpS4m",
+  base: "",
+  url: "https://api.airtable.com/v0/",
+  init: function ({
+    apiKey,
+    base
+  }) {
+    this.apiKey = apiKey;
+    this.base = base; //const records = await this.fetch("Link");
 
+    return this;
+  },
+  fetch: async function (table) {
+    if (this.apiKey && this.base && table) {
+      const endpoint = `${this.url}${this.base}/${table}?api_key=${this.apiKey}`; //console.log(endpoint);
 
-exports.__esModule = true;
-exports.getRouteMatcher = getRouteMatcher;
+      const res = await fetch(endpoint, {});
+      const rj = await res.json(); //console.log("response", rj);
 
-function getRouteMatcher(routeRegex) {
-  const {
-    re,
-    groups
-  } = routeRegex;
-  return pathname => {
-    const routeMatch = re.exec(pathname);
-
-    if (!routeMatch) {
-      return false;
-    }
-
-    const decode = param => {
-      try {
-        return decodeURIComponent(param);
-      } catch (_) {
-        const err = new Error('failed to decode param');
-        err.code = 'DECODE_FAILED';
-        throw err;
-      }
-    };
-
-    const params = {};
-    Object.keys(groups).forEach(slugName => {
-      const g = groups[slugName];
-      const m = routeMatch[g.pos];
-
-      if (m !== undefined) {
-        params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
-      }
-    });
-    return params;
-  };
-}
-
-/***/ }),
-
-/***/ "hS4m":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.parseRelativeUrl = parseRelativeUrl;
-
-var _utils = __webpack_require__("g/15");
-
-var _querystring = __webpack_require__("3WeD");
-
-const DUMMY_BASE = new URL(true ? 'http://n' : undefined);
-/**
-* Parses path-relative urls (e.g. `/hello/world?foo=bar`). If url isn't path-relative
-* (e.g. `./hello`) then at least base must be.
-* Absolute urls are rejected with one exception, in the browser, absolute urls that are on
-* the current origin will be parsed as relative
-*/
-
-function parseRelativeUrl(url, base) {
-  const resolvedBase = base ? new URL(base, DUMMY_BASE) : DUMMY_BASE;
-  const {
-    pathname,
-    searchParams,
-    search,
-    hash,
-    href,
-    origin,
-    protocol
-  } = new URL(url, resolvedBase);
-
-  if (origin !== DUMMY_BASE.origin || protocol !== 'http:' && protocol !== 'https:') {
-    throw new Error('invariant: invalid relative URL');
+      return rj.records;
+    } else return null;
   }
+};
+
+async function fetcher() {
+  AirtableAPI.init({
+    apiKey: "keym6ehWNZnQzpS4m",
+    base: "appq9CwhpYOjOv4tQ"
+  });
+  const tagdata = await AirtableAPI.fetch("Tag");
+  const categorydata = await AirtableAPI.fetch("Category");
+  const linkdata = await AirtableAPI.fetch("Link"); //console.log("props", tagdata, categorydata, linkdata)
 
   return {
-    pathname,
-    query: (0, _querystring.searchParamsToUrlQuery)(searchParams),
-    search,
-    hash,
-    href: href.slice(DUMMY_BASE.origin.length)
+    linkdata,
+    tagdata,
+    categorydata
+  };
+}
+
+async function Airdata(req, res) {
+  return await fetcher();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Airdata);
+
+/***/ }),
+
+/***/ "Osoz":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/router-context.js");
+
+/***/ }),
+
+/***/ "RNiq":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4Q3z");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("XE9o");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("5Yp1");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("3Mv1");
+/* harmony import */ var _components_Hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("+lMf");
+/* harmony import */ var _category_slug___WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("7Ljw");
+/* harmony import */ var _api_hello__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("Nxiy");
+
+
+
+
+
+
+
+
+
+
+
+function Home({
+  linkdata,
+  categorydata,
+  tagdata
+}) {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
+  const {
+    pathname
+  } = router;
+  console.log("home", pathname);
+  const {
+    0: activeState,
+    1: setActiveState
+  } = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])("all");
+  const favouriteTags = tagdata.filter(t => t.fields.fav === true);
+  const existingTags = tagdata.filter(t => t.fields.link);
+  const existingCategories = categorydata.filter(c => c.fields.link);
+  const tagNames = existingTags.map(t => t.fields.name);
+  const categoryNames = existingCategories.map(c => c.fields.name);
+  const favourites = linkdata.filter(link => link.fields.fav === true);
+
+  const getTagNamesById = tagId => tagdata.filter(t => t.id === tagId).map(t => t.fields.name)[0];
+
+  const getLinksByTagName = tagSlug => {
+    const currentTag = existingTags.filter(t => t.fields.slug === tagSlug)[0];
+    const currentLinkIds = currentTag.fields.link;
+    return linkdata.filter(l => currentLinkIds.includes(l.id));
+  };
+
+  const activeLinks = activeState === "all" ? favourites : getLinksByTagName(activeState);
+
+  const handleClick = (e, tagname) => {
+    //e.preventDefault()
+    //router.push(tagname)
+    console.log(tagname);
+    setActiveState(tagname);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-YWQNTGMG9S');
+  }, []);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(_components_Layout__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
+        children: "Harikulade Uygulamalar: Tasar\u0131m, Yaz\u0131l\u0131m, \xDCretkenlik ..."
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        name: "description",
+        content: "Harikulade uygulamalar ke\u015Ffedin.  Yaz\u0131l\u0131m, tasar\u0131m, \xFCretkenlik, i\u015F ve no-code uygulamalar\u0131 k\xFCrasyonu."
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+        rel: "icon",
+        href: "/favicon.ico"
+      })]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Hero__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+      categories: categorydata
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      className: "Selector",
+      children: favouriteTags.map(t => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("input", {
+        type: "radio",
+        title: t.fields.name,
+        value: t.fields.slug,
+        onChange: e => handleClick(e, t.fields.slug),
+        checked: activeState === t.fields.slug,
+        name: "selector"
+      }, t.fields.slug))
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      id: "grid-container",
+      class: "w-layout-grid grid",
+      children: activeLinks.map(link => {
+        const tagNames = link.fields.tag ? link.fields.tag.map(tid => getTagNamesById(tid)) : [];
+        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Card__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {
+          tagNames: tagNames,
+          slug: link.fields.slug,
+          title: link.fields.title,
+          bilgi: link.fields.bilgi,
+          description: link.fields.description,
+          imageUrl: link.fields.imageUrl,
+          url: link.fields.url
+        }, link.id);
+      })
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+      href: "https://guvenlik.sistemleri.pro",
+      children: "alarm sistemleri rehberi"
+    })]
+  });
+}
+async function getStaticProps(context) {
+  const {
+    linkdata,
+    categorydata,
+    tagdata
+  } = await Object(_api_hello__WEBPACK_IMPORTED_MODULE_9__["default"])(); //const data = await rawdata.json()
+  //console.log("data", data)
+
+  return {
+    props: {
+      linkdata,
+      categorydata,
+      tagdata
+    } // will be passed to the page component as props
+
   };
 }
 
 /***/ }),
 
-/***/ "nOHt":
+/***/ "SYP7":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__("284h");
+var _interopRequireWildcard = __webpack_require__("VFjW");
 
-var _interopRequireDefault = __webpack_require__("TqRt");
+var _interopRequireDefault = __webpack_require__("JN0C");
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
@@ -2719,14 +2368,14 @@ exports.createRouter = exports.withRouter = exports.default = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__("cDcd"));
 
-var _router2 = _interopRequireWildcard(__webpack_require__("elyg"));
+var _router2 = _interopRequireWildcard(__webpack_require__("1JtQ"));
 
 exports.Router = _router2.default;
 exports.NextRouter = _router2.NextRouter;
 
 var _routerContext = __webpack_require__("Osoz");
 
-var _withRouter = _interopRequireDefault(__webpack_require__("0Bsm"));
+var _withRouter = _interopRequireDefault(__webpack_require__("Wzz6"));
 
 exports.withRouter = _withRouter.default;
 /* global window */
@@ -2854,12 +2503,366 @@ function makePublicRouterInstance(router) {
 
 /***/ }),
 
-/***/ "wkBG":
+/***/ "VFjW":
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__("9mTt");
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
+    return {
+      "default": obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj["default"] = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+module.exports = _interopRequireWildcard;
+
+/***/ }),
+
+/***/ "Wzz6":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
-//# sourceMappingURL=denormalize-page-path.js.map
+
+
+var _interopRequireDefault = __webpack_require__("JN0C");
+
+exports.__esModule = true;
+exports.default = withRouter;
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _router = __webpack_require__("SYP7");
+
+function withRouter(ComposedComponent) {
+  function WithRouterWrapper(props) {
+    return /*#__PURE__*/_react.default.createElement(ComposedComponent, Object.assign({
+      router: (0, _router.useRouter)()
+    }, props));
+  }
+
+  WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
+  ;
+  WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
+
+  if (false) {}
+
+  return WithRouterWrapper;
+}
+
+/***/ }),
+
+/***/ "XE9o":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("3tXa")
+
+
+/***/ }),
+
+/***/ "cDcd":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "d32D":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.isDynamicRoute = isDynamicRoute; // Identify /[param]/ in route string
+
+const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
+
+function isDynamicRoute(route) {
+  return TEST_ROUTE.test(route);
+}
+
+/***/ }),
+
+/***/ "hYEp":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
+exports.urlQueryToSearchParams = urlQueryToSearchParams;
+exports.assign = assign;
+
+function searchParamsToUrlQuery(searchParams) {
+  const query = {};
+  searchParams.forEach((value, key) => {
+    if (typeof query[key] === 'undefined') {
+      query[key] = value;
+    } else if (Array.isArray(query[key])) {
+      ;
+      query[key].push(value);
+    } else {
+      query[key] = [query[key], value];
+    }
+  });
+  return query;
+}
+
+function stringifyUrlQueryParam(param) {
+  if (typeof param === 'string' || typeof param === 'number' && !isNaN(param) || typeof param === 'boolean') {
+    return String(param);
+  } else {
+    return '';
+  }
+}
+
+function urlQueryToSearchParams(urlQuery) {
+  const result = new URLSearchParams();
+  Object.entries(urlQuery).forEach(([key, value]) => {
+    if (Array.isArray(value)) {
+      value.forEach(item => result.append(key, stringifyUrlQueryParam(item)));
+    } else {
+      result.set(key, stringifyUrlQueryParam(value));
+    }
+  });
+  return result;
+}
+
+function assign(target, ...searchParamsList) {
+  searchParamsList.forEach(searchParams => {
+    Array.from(searchParams.keys()).forEach(key => target.delete(key));
+    searchParams.forEach((value, key) => target.append(key, value));
+  });
+  return target;
+}
+
+/***/ }),
+
+/***/ "idHl":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.getRouteRegex = getRouteRegex; // this isn't importing the escape-string-regex module
+// to reduce bytes
+
+function escapeRegex(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+}
+
+function parseParameter(param) {
+  const optional = param.startsWith('[') && param.endsWith(']');
+
+  if (optional) {
+    param = param.slice(1, -1);
+  }
+
+  const repeat = param.startsWith('...');
+
+  if (repeat) {
+    param = param.slice(3);
+  }
+
+  return {
+    key: param,
+    repeat,
+    optional
+  };
+}
+
+function getRouteRegex(normalizedRoute) {
+  const segments = (normalizedRoute.replace(/\/$/, '') || '/').slice(1).split('/');
+  const groups = {};
+  let groupIndex = 1;
+  const parameterizedRoute = segments.map(segment => {
+    if (segment.startsWith('[') && segment.endsWith(']')) {
+      const {
+        key,
+        optional,
+        repeat
+      } = parseParameter(segment.slice(1, -1));
+      groups[key] = {
+        pos: groupIndex++,
+        repeat,
+        optional
+      };
+      return repeat ? optional ? '(?:/(.+?))?' : '/(.+?)' : '/([^/]+?)';
+    } else {
+      return `/${escapeRegex(segment)}`;
+    }
+  }).join(''); // dead code eliminate for browser since it's only needed
+  // while generating routes-manifest
+
+  if (true) {
+    let routeKeyCharCode = 97;
+    let routeKeyCharLength = 1; // builds a minimal routeKey using only a-z and minimal number of characters
+
+    const getSafeRouteKey = () => {
+      let routeKey = '';
+
+      for (let i = 0; i < routeKeyCharLength; i++) {
+        routeKey += String.fromCharCode(routeKeyCharCode);
+        routeKeyCharCode++;
+
+        if (routeKeyCharCode > 122) {
+          routeKeyCharLength++;
+          routeKeyCharCode = 97;
+        }
+      }
+
+      return routeKey;
+    };
+
+    const routeKeys = {};
+    let namedParameterizedRoute = segments.map(segment => {
+      if (segment.startsWith('[') && segment.endsWith(']')) {
+        const {
+          key,
+          optional,
+          repeat
+        } = parseParameter(segment.slice(1, -1)); // replace any non-word characters since they can break
+        // the named regex
+
+        let cleanedKey = key.replace(/\W/g, '');
+        let invalidKey = false; // check if the key is still invalid and fallback to using a known
+        // safe key
+
+        if (cleanedKey.length === 0 || cleanedKey.length > 30) {
+          invalidKey = true;
+        }
+
+        if (!isNaN(parseInt(cleanedKey.substr(0, 1)))) {
+          invalidKey = true;
+        }
+
+        if (invalidKey) {
+          cleanedKey = getSafeRouteKey();
+        }
+
+        routeKeys[cleanedKey] = key;
+        return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
+      } else {
+        return `/${escapeRegex(segment)}`;
+      }
+    }).join('');
+    return {
+      re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+      groups,
+      routeKeys,
+      namedRegex: `^${namedParameterizedRoute}(?:/)?$`
+    };
+  }
+
+  return {
+    re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+    groups
+  };
+}
+
+/***/ }),
+
+/***/ "ouWb":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "wjDo":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.parseRelativeUrl = parseRelativeUrl;
+
+var _utils = __webpack_require__("Nv7i");
+
+var _querystring = __webpack_require__("hYEp");
+
+const DUMMY_BASE = new URL(true ? 'http://n' : undefined);
+/**
+* Parses path-relative urls (e.g. `/hello/world?foo=bar`). If url isn't path-relative
+* (e.g. `./hello`) then at least base must be.
+* Absolute urls are rejected with one exception, in the browser, absolute urls that are on
+* the current origin will be parsed as relative
+*/
+
+function parseRelativeUrl(url, base) {
+  const resolvedBase = base ? new URL(base, DUMMY_BASE) : DUMMY_BASE;
+  const {
+    pathname,
+    searchParams,
+    search,
+    hash,
+    href,
+    origin,
+    protocol
+  } = new URL(url, resolvedBase);
+
+  if (origin !== DUMMY_BASE.origin || protocol !== 'http:' && protocol !== 'https:') {
+    throw new Error('invariant: invalid relative URL');
+  }
+
+  return {
+    pathname,
+    query: (0, _querystring.searchParamsToUrlQuery)(searchParams),
+    search,
+    hash,
+    href: href.slice(DUMMY_BASE.origin.length)
+  };
+}
 
 /***/ }),
 
