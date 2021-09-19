@@ -10,7 +10,7 @@ const Hero = ({ categories }) => {
         <div className="flex-container">
           <div className="hero-text-block">
             <h1 className="hero-h1">Harikulade Uygulamalar.<br/></h1>
-            <p className="hero-paragraph">Harikulade tasarım, yazılım, ofis, pazarlama ve no-code uygulamaları.</p>
+            <p className="hero-paragraph">Harikulade tasarım, yazılım, ofis, pazarlama ve no-code uygulamaları keşfedin. </p>
           </div>
           <div className="div-block-2"></div>
         </div>

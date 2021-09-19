@@ -1,8 +1,11 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/api/airtable": "pages/api/airtable.js",
+  "/api/cbs-card": "pages/api/cbs-card.js",
+  "/api/hello": "pages/api/hello.js",
+  "/category/[slug]": "pages/category/[slug].js",
   "/": "pages/index.js",
-  "/category/[slug]": "pages/category/[slug].js"
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
 }

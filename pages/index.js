@@ -55,7 +55,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
   return (
     <Layout>
       <Head>
-        <title>Harikulade Uygulamalar: Tasarım, Yazılım, Üretkenlik ...</title>
+        <title>Hariukalde Yazılım, Tasarım, Kodsuz Programlama Araçları ...</title>
         <meta name="description" content="Harikulade uygulamalar keşfedin.  Yazılım, tasarım, üretkenlik, iş ve no-code uygulamaları kürasyonu."></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -92,6 +92,7 @@ export default function Home({ linkdata, categorydata, tagdata }) {
                 url={link.fields.url}
             />
           )})}
+
 
         </div>
 
