@@ -94,7 +94,6 @@ export default function Home({ linkdata, categorydata, tagdata }) {
           )})}
 
         </div>
-        <a href="https://guvenlik.sistemleri.pro">alarm sistemleri rehberi</a>
 
     </Layout>
   )
